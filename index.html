@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 	<title>Document</title>
+  <link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon">
 </head>
 <style type="text/css">
 	* {
@@ -40,10 +41,12 @@
     background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.6) 30%, #fff 50%, rgba(0, 0, 0, 0.6) 70%);
     background-blend-mode: hard-light;
     background-size: 350%;
-    animation: shine 4s infinite; 
+    -webkit-animation: shine 4s infinite;
+            animation: shine 4s infinite; 
     -webkit-border-fit: scale;
     border-fit: scale;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   .line .a {
     display: block;
