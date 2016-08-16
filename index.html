@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  html,body {
+    width: 100%;
+    height: 100%;
+  }
+  .bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: -webkit-box;
+    display: flex;
+    -webkit-transition: all ls;
+    transition: all ls;
+  }
+  .line {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    height: 80px;
+    width: 350px;
+    text-align: center;
+    line-height: 80px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: #fff;
+    background-color: rgba(0,0,0,.2);
+    background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.6) 30%, #fff 50%, rgba(0, 0, 0, 0.6) 70%);
+    background-blend-mode: hard-light;
+    background-size: 350%;
+    animation: shine 4s infinite; 
+    -webkit-border-fit: scale;
+    border-fit: scale;
+    transform: translateX(-50%);
+  }
+  .line .a {
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    font-size: 45px;
+    font-family: '微软雅黑' 
+  }
+
+  @-webkit-keyframes shine {
+   from {background-position: 100%;}
+   to {background-position: 0;}
+ }
+
+ @keyframes shine {
+   from {background-position: 100%;}
+   to {background-position: 0;}
+ }
+	/* .a1 {
+		 -webkit-animation-name: bounce;
+	}
+	 .a2 {
+		-webkit-animation-name: bounce;
+	}
+	.a3 {
+		-webkit-animation-name: bounce;
+	}
+	.a4 {
+		-webkit-animation-name: bounce;
+	}
+	.a5 {
+		-webkit-animation-name: bounce;
+	}
+	.a6 {
+		-webkit-animation-name: bounce;
+	}
+	.a7 {
+		-webkit-animation-name: bounce;
+	}
+	.a8 {
+		-webkit-animation-name: bounce;
+	}  */
+
+  .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both
+  }
+
+  .animated.infinite {
+    animation-iteration-count: infinite
+  }
+
+  .animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s
+  }
+
+  .delay_01 {
+    -webkit-animation-delay: .1s;
+    animation-delay: .1s;
+  }
+  .delay_02 {
+    -webkit-animation-delay: .2s;
+    animation-delay: .2s;
+  }
+  .delay_03 {
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+  }
+  .delay_04 {
+    -webkit-animation-delay: .4s;
+    animation-delay: .4s;
+  }
+  .delay_05 {
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+  }
+  .delay_06 {
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s;
+  }
+
+  .delay_07 {
+    -webkit-animation-delay: .7s;
+    animation-delay: .7s;
+  }
+
+  @-webkit-keyframes bounce {
+    0%, 100%, 20%, 53%, 80% {
+      -webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+      transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0)
+    }
+    40%, 43% {
+      -webkit-transition-timing-function: cubic-bezier(0.755, .050, .855, .060);
+      transition-timing-function: cubic-bezier(0.755, .050, .855, .060);
+      -webkit-transform: translate3d(0, -30px, 0);
+      transform: translate3d(0, -30px, 0)
+    }
+    70% {
+      -webkit-transition-timing-function: cubic-bezier(0.755, .050, .855, .060);
+      transition-timing-function: cubic-bezier(0.755, .050, .855, .060);
+      -webkit-transform: translate3d(0, -15px, 0);
+      transform: translate3d(0, -15px, 0)
+    }
+    90% {
+      -webkit-transform: translate3d(0, -4px, 0);
+      transform: translate3d(0, -4px, 0)
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100%, 20%, 53%, 80% {
+      -webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+      transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+      -webkit-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      color: #BDDD22;
+    }
+    20% {
+     color: #4B5CC4
+   }
+   40%, 43% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, .050, .855, .060);
+    transition-timing-function: cubic-bezier(0.755, .050, .855, .060);
+    -webkit-transform: translate3d(0, -20px, 0);
+    -ms-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+    color: #F00056;
+  }
+  50% {
+  	color: #FFF143;
+  }
+  70% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, .050, .855, .060);
+    transition-timing-function: cubic-bezier(0.755, .050, .855, .060);
+    -webkit-transform: translate3d(0, -10px, 0);
+    -ms-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+    color: green;
+  }
+  90% {
+    -webkit-transform: translate3d(0, -2px, 0);
+    -ms-transform: translate3d(0, -2px, 0);
+    transform: translate3d(0, -2px, 0);
+    color: red;
+  }
+
+}
+
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
+  transform-origin: center bottom;
+  -moz-transition: center bottom
+}
+
+@keyframes color1 {
+  0% {
+    border-color: rgba(237,252, 87, 0);
+    -webkit-filter:drop-shadow(0 0 30px rgba(237,252, 87,.8));
+  }
+  100% {
+   border-color: rgba(237,252, 87,.3);
+   -webkit-filter:drop-shadow(0 0 40px rgba(237,252, 87, 1));
+ }
+}
+
+@keyframes color2 {
+ 0% {
+  border-color: rgba(237,252, 87,.1);
+}
+100% {
+ border-color: rgba(237, 252, 87,.5);
+}
+}
+
+@keyframes color3 {
+ 0% {
+  border-color: rgba(252,230, 87,.3);
+}
+100% {
+ border-color: rgba(252,230, 87,.8);
+}
+}
+
+.finger {
+  position: absolute;
+  top: 490px;
+  left: 363px;
+  width: 54px;
+  animation: finger linear 1s infinite alternate;
+  transform-origin: center bottom;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+@keyframes finger {
+  0% {
+    transform: rotateX(0);
+  }
+  50% {
+    transform: rotateX(20deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
+}
+
+
+</style>
+<body>
+	<div class="bg">
+		<div class="line">
+      <div class="a a1 animated infinite">I am Godzilla</div>
+    </div>
+   <!--  <div class="outer" style="position:absolute;top: 400px;left:300px;width:150px;height:150px; -webkit-filter:drop-shadow(0 0 10px rgba(237,252, 87, .8));border:15px solid rgba(252,252, 87,.1);;border-radius: 50%;animation: color1 linear 2s infinite;">
+     <div class="box" style="width:100%;height:100%;border: 12px solid rgba(252,252, 87,.1);border-radius: 50%;animation: color2 linear 2s infinite;">
+      <img src="img/gonghui.png" style="width:100%;height:100%;border:8px solid rgba(252,230, 87,.3);border-radius: 50%;display: block;animation: color3 linear 2s infinite;">
+    </div> -->
+<!--   </div>
+  <div class="finger">
+    <img src="img/finger.png" alt="">
+  </div> -->
+</div>
+</body>
+</html>
