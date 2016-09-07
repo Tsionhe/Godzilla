@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.transition(@one, @two) {
+  -webkit-transition: @one @two;
+  -moz-transition: @one @two;
+  -ms-transition: @one @two;
+  -o-transition: @one @two;
+  transition: @one @two;
+}
+
+.transform(@form) {
+  -webkit-transform: @form;
+  -moz-transform: @form;
+  -ms-transform: @form;
+  -o-transform: @form;
+  transform: @form;
+}
+html, body {
+  width: 100%;
+}
+
+body {
+  font: 14px/1.5 "微软雅黒", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: url("../img/noisebg.png");
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 200px;
+  height: 100%;
+  background: rgba(0, 0, 0, .8);
+  .back {
+    position: absolute;
+    top: 5px;
+    left: 25px;
+    font-size: 20px;
+    outline: none;
+  }
+  .menu {
+    margin-top: 60px;
+    a {
+      margin-bottom: 20px;
+      font-size: 16px;
+      display: block;
+      text-align: center;
+      outline: none;
+      &:focus {
+        color: #666;
+      }
+      &:hover {
+        color: #ce2c38;
+      }
+    }
+    a.on{
+      color: #ce2c38;
+    }
+  }
+}
+
+.main {
+  margin-left: 210px;
+  .flexBox {
+    display: none;
+  }
+  .flexBox.on {
+    display: block;
+  }
+}
+
+.music-box {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  width: 300px;
+  background-color: #fff;
+}
+
+.img-wrap {
+  color: #fff;
+}
+
+.link {
+  cursor: pointer;
+  &:hover {
+    color: #fff;
+  }
+}
+
+
